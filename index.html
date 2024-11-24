@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* General Layout */
+        body {
+            background-color: #f0f2f5;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background-color: #4267b2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        /* Dropdown Menu */
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: #4267b2;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Banner */
+        .top-banner {
+            width: 100%;
+            height: auto;
+            margin-top: 60px; /* Offset for header */
+        }
+
+        .top-banner img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Main Container */
+        .container {
+            margin-top: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .post-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .post-item h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Responsive Image Layout */
+        .post-item .preview-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .post-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 768px) {
+            .post-item h3 {
+                font-size: 18px;
+            }
+            .post-item {
+                padding: 10px;
+            }
+            .top-banner img {
+                max-height: 200px;
+            }
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4267b2;
+            color: white;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4267b2;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            height: 80%;
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>CONTOH</h1>
+        <div class="dropdown">
+            <span class="menu-icon">☰</span>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="index.html">Download</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content" id="articles">
+            <!-- Example Post Item -->
+            
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/e0k15o2191lj')">
+                            <h3>Young Twinks Travel Go to Hotel Fuck Boy Handsome Muscle Bareback</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/rc4mvj1r6l3ezy4i.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/rc4mvj1r6l3ezy4i.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/4d18ws20cfua')">
+                            <h3>My Stepdad Wakes Me up to Fuck all Over the House: Rough Sex Porn feat  SAMANTA</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/fnwp6j6v9515db8y.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/fnwp6j6v9515db8y.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/7p3amj3sy62a')">
+                            <h3>My Stepsister Masturbates on the Bed Below and Convinces Me to Give Her My Milk</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/ihl70b4kjxm8c5oj.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/ihl70b4kjxm8c5oj.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/kavj7ms26wen')">
+                            <h3>Horny Stepsister Maddy May Can& 039;t Think Nothing but Harcore Sex with Her Stepbrother& 039;s Fat Cock During Nude Posing</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/mbjwrdt9dowgm5ts.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/mbjwrdt9dowgm5ts.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/922dpxvic92f')">
+                            <h3>The Most Beautiful Virgin Girl Losing Her Virginity Before the Camera</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/la62u9hb5q5aepe7.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/la62u9hb5q5aepe7.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/v2l3k4uddsmd')">
+                            <h3>Pappu Pelu brother in law fucks sexy sister in law, part 2</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/2hmmzxn3uczyxumv.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/2hmmzxn3uczyxumv.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/6mv7a7t44j5w')">
+                            <h3>Indonesian- itenas bandung sex tape part 1</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/tv5alpqnoqvqk7zj.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/tv5alpqnoqvqk7zj.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/0kc9uiro7tk1')">
+                            <h3>Seks ayah dan anak perempuan filipina buatan sendiri</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/re3xywbz0f19amw1.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/re3xywbz0f19amw1.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                    
+                        <div class="post-item" onclick="openPostLink('https://dood.li/e/wqi47tdrvacp')">
+                            <h3>Cewek sma kecanduan maen memek</h3>
+                            <div class="preview-images">
+                                <img src="https://img.doodcdn.co/snaps/tshvigfzv75uo0i5.jpg" alt="Image 1">
+                                <img src="https://img.doodcdn.co/splash/tshvigfzv75uo0i5.jpg" alt="Image 2">
+                            </div>
+                        </div>
+                        
+          
+                    
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">Atas</button>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>CONTOH | Copyright &copy; 2024</p>
+    </div>
+
+    <!-- Modal for Displaying Content -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="modalIframe" src="" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Menampilkan tombol "Kembali ke Atas" saat di-scroll ke bawah
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("back-to-top");
+            if (document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Fungsi untuk scroll kembali ke atas
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fungsi untuk membuka link di dalam modal
+        function openPostLink(url) {
+            const modal = document.getElementById("myModal");
+            const iframe = document.getElementById("modalIframe");
+            iframe.src = url; // Menyisipkan URL ke dalam iframe
+            modal.style.display = "block"; // Menampilkan modal
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            const iframe = document.getElementById("modalIframe");
+            iframe.src = ""; // Menghapus URL dalam iframe untuk mengosongkan konten
+            modal.style.display = "none"; // Menyembunyikan modal
+        }
+    </script>
+
+</body>
+</html>
